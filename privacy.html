@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru" data-active-lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика конфиденциальности — PageX</title>
+  <meta name="description" content="Политика конфиденциальности PageX: без аккаунтов, рекламы и аналитики. Все сканы и распознавание текста — на устройстве.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Политика конфиденциальности — PageX">
+  <meta property="og:description" content="PageX не собирает персональные данные. Все сканы и распознавание текста выполняются на вашем устройстве.">
+  <meta property="og:image" content="img/after.jpg">
+  <link rel="icon" type="image/png" href="img/icon-256.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="privacy">
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="img/icon-256.png" alt="PageX" width="256" height="256" loading="lazy">
+        <span>PageX</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+          <button type="button" class="lang-btn" data-lang="ru" aria-pressed="true">РУС</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">ENG</button>
+        </div>
+
+        <a class="btn btn--primary btn--sm nav-cta-desktop js-appstore-btn is-disabled" aria-disabled="true">
+          <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+          </svg>
+          <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-page">
+    <div class="container container--narrow">
+      <a class="doc-back" href="index.html" data-i18n="back_home">← На главную PageX</a>
+
+      <article class="doc-card">
+        <!-- РУССКИЙ -->
+        <div data-lang-section="ru">
+          <h1>Политика конфиденциальности</h1>
+          <p class="doc-date">Последнее обновление: 26 ноября 2026 г.</p>
+
+          <section class="doc-section">
+            <h2>1. Коротко</h2>
+            <p>PageX не собирает персональные данные. В приложении нет аккаунтов, регистрации, рекламы, аналитики и сторонних SDK для отслеживания. Приложение разрабатывает и поддерживает один независимый разработчик — Aidos Marat.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>2. Что хранится на устройстве</h2>
+            <p>Все ваши сканы, документы, папки, теги, распознанный текст, подписи и настройки хранятся исключительно локально на вашем iPhone, iPad или Mac. Удаление приложения удаляет эти данные с устройства.</p>
+            <p>Информация о состоянии пробного периода сохраняется в защищённом системном хранилище устройства (Keychain) и не содержит никаких персональных данных.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>3. Что уходит в сеть и кому</h2>
+            <p>Очистка сканов, распознавание текста (OCR) и подготовка фото на документы выполняются <strong>полностью на устройстве</strong> — ваши изображения никуда не отправляются.</p>
+            <p>Сетевые запросы происходят только по вашему явному действию:</p>
+            <ul>
+              <li><strong>Скачивание дополнительных языков распознавания текста</strong> выполняется с GitHub (репозиторий <code>tesseract-ocr</code>) — передаётся только запрос нужного файла языка.</li>
+              <li><strong>Кнопка «Google Переводчик»</strong> для казахского текста открывает сайт Google в браузере с этим текстом — только если вы сами её нажали.</li>
+              <li><strong>Кнопка «Перевести» (Apple Translation)</strong> выполняется средствами системы iOS.</li>
+              <li><strong>По желанию:</strong> автоматическое сохранение проекта <code>.pagex</code> в ваш личный iCloud Drive (Apple); у разработчика нет доступа к вашему iCloud Drive.</li>
+              <li><strong>«Поделиться»</strong> отправляет выбранные файлы туда, куда указали вы (почта, мессенджеры, AirDrop и т. д.).</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>4. Разрешения устройства</h2>
+            <ul>
+              <li><strong>Камера</strong> — для съёмки и сканирования страниц, документов и фото на документы.</li>
+              <li><strong>Фото</strong> — чтобы импортировать готовые снимки из галереи и сохранять результаты.</li>
+              <li><strong>Face ID</strong> — чтобы закрывать выбранные папки и документы. Проверку выполняет система iOS; приложение не получает и не хранит ваши биометрические данные.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>5. Покупки</h2>
+            <p>Оформление подписки и покупка PageX Pro проходят через App Store. Платёжные данные обрабатывает исключительно Apple — разработчик их не видит и не получает.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>6. Ваши права и удаление данных</h2>
+            <p>Поскольку разработчик не собирает и не хранит ваши персональные данные, на стороне разработчика нет данных для выгрузки или удаления. Все локальные данные удаляются вместе с приложением (копии проектов в iCloud Drive, если вы включали их, можно удалить вручную в приложении «Файлы»).</p>
+            <p>Обработка и защита информации соответствуют требованиям Закона Республики Казахстан «О персональных данных и их защите».</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>7. Дети</h2>
+            <p>PageX не собирает персональные данные ни у детей, ни у взрослых.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>8. Изменения политики</h2>
+            <p>При обновлении этой политики новая версия публикуется на данной странице с обновлённой датой вверху документа.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>9. Связаться с разработчиком</h2>
+            <p>Если у вас есть вопросы о конфиденциальности, напишите на <a href="mailto:pagex.support@icloud.com">pagex.support@icloud.com</a>. Ответ обычно приходит в течение 1–2 дней.</p>
+          </section>
+        </div>
+
+        <!-- ҚАЗАҚША -->
+        <div data-lang-section="kk">
+          <h1>Құпиялық саясаты</h1>
+          <p class="doc-date">Соңғы жаңарту: 2026 жылғы 26 қараша</p>
+
+          <section class="doc-section">
+            <h2>1. Қысқаша</h2>
+            <p>PageX дербес деректерді жинамайды. Қосымшада аккаунттар, тіркелу, жарнама, аналитика және бақылауға арналған бөгде SDK жоқ. Қосымшаны бір тәуелсіз әзірлеуші — Aidos Marat жасайды және қолдайды.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>2. Құрылғыда не сақталады</h2>
+            <p>Барлық скандар, құжаттар, қалталар, тегтер, танылған мәтін, қолтаңбалар және баптаулар тек сіздің iPhone, iPad немесе Mac құрылғыңызда жергілікті түрде сақталады. Қосымшаны жойғанда бұл деректер де құрылғыдан өшіріледі.</p>
+            <p>Сынақ кезеңінің күйі құрылғының қорғалған жүйелік қоймасында (Keychain) сақталады және ешқандай жеке деректерді қамтымайды.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>3. Желіге не және кімге жіберіледі</h2>
+            <p>Скандарды тазарту, мәтін тану (OCR) және құжатқа фото дайындау <strong>толығымен құрылғыда</strong> орындалады — суреттеріңіз ешқайда жіберілмейді.</p>
+            <p>Желілік сұраулар тек сіздің тікелей әрекетіңізбен орындалады:</p>
+            <ul>
+              <li><strong>Қосымша мәтін тану тілдерін жүктеу</strong> GitHub желісінен (<code>tesseract-ocr</code> репозиторийі) жүзеге асады — тек тіл файлына сұрау жіберіледі.</li>
+              <li><strong>Қазақша мәтінге арналған «Google Аудармашы» батырмасы</strong> браузерде сол мәтінмен Google сайтын ашады — тек өзіңіз бассаңыз ғана.</li>
+              <li><strong>«Аудару» (Apple Translation)</strong> функциясы iOS жүйесінің өзімен орындалады.</li>
+              <li><strong>Қалауыңыз бойынша:</strong> <code>.pagex</code> жобасын жеке iCloud Drive қоймаңызға (Apple) автоматты сақтау; әзірлеушінің сіздің iCloud Drive қоймаңызға қолжетімділігі жоқ.</li>
+              <li><strong>«Бөлісу»</strong> таңдалған файлдарды тек сіз көрсеткен жерге (пошта, мессенджерлер, AirDrop және т.б.) жібереді.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>4. Құрылғы рұқсаттары</h2>
+            <ul>
+              <li><strong>Камера</strong> — кітап беттерін, құжаттарды және құжатқа фотоны түсіру үшін.</li>
+              <li><strong>Фото</strong> — галереядан суреттерді импорттау және дайын нәтижелерді сақтау үшін.</li>
+              <li><strong>Face ID</strong> — қалталар мен құжаттарды құлыптау үшін. Тексеруді iOS жүйесі орындайды; қосымша биометриялық деректерді алмайды және сақтамайды.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>5. Сатып алулар</h2>
+            <p>PageX Pro жазылымы мен сатып алулары App Store арқылы өтеді. Төлем деректерін тек Apple өңдейді — әзірлеуші оларды алмайды.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>6. Сіздің құқықтарыңыз және деректерді жою</h2>
+            <p>Әзірлеуші сіздің дербес деректеріңізді жинамайтындықтан және сақтамайтындықтан, әзірлеуші тарапынан жүктеп беруге немесе жоюға арналған деректер жоқ. Барлық деректер қосымшамен бірге жойылады (iCloud Drive-тағы көшірмелерді қажет болса қолмен өшіруге болады).</p>
+            <p>Бұл тәсіл «Дербес деректер және оларды қорғау туралы» Қазақстан Республикасының Заңына сәйкес келеді.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>7. Балалар</h2>
+            <p>PageX балалардан да, ересектерден де ешқандай дербес деректер жинамайды.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>8. Саясаттағы өзгерістер</h2>
+            <p>Құпиялық саясаты жаңартылған кезде жаңа нұсқасы осы бетте жаңа күнмен жарияланады.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>9. Байланыс</h2>
+            <p>Құпиялыққа қатысты сұрақтарыңыз болса, <a href="mailto:pagex.support@icloud.com">pagex.support@icloud.com</a> поштасына жазыңыз. Жауап әдетте 1–2 күн ішінде келеді.</p>
+          </section>
+        </div>
+
+        <!-- ENGLISH -->
+        <div data-lang-section="en">
+          <h1>Privacy Policy</h1>
+          <p class="doc-date">Last updated: November 26, 2026</p>
+
+          <section class="doc-section">
+            <h2>1. Summary</h2>
+            <p>PageX does not collect personal data. There are no accounts, sign-ups, ads, analytics, or third-party tracking SDKs. The app is built and maintained by a solo independent developer, Aidos Marat.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>2. What Is Stored on Your Device</h2>
+            <p>Your scans, documents, folders, tags, recognized text, signatures, and settings are stored exclusively on your iPhone, iPad, or Mac. Deleting the app deletes this local data.</p>
+            <p>Your free trial state is stored in the device's secure Keychain and contains no personal information.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>3. Network Activity</h2>
+            <p>Scan cleanup, text recognition (OCR), and ID photo processing run <strong>entirely on your device</strong> — your images are never uploaded anywhere.</p>
+            <p>Network connections happen only when you explicitly trigger an action:</p>
+            <ul>
+              <li><strong>Downloading extra OCR languages</strong> fetches the requested language file from GitHub (the <code>tesseract-ocr</code> repository) — only the language file request is sent.</li>
+              <li><strong>“Google Translate” button</strong> for Kazakh text opens Google in your browser with that text — only if you tap it.</li>
+              <li><strong>“Translate” (Apple Translation)</strong> is handled by iOS.</li>
+              <li><strong>Optional auto-save:</strong> saving <code>.pagex</code> projects to your personal iCloud Drive (Apple); the developer has no access to your iCloud Drive.</li>
+              <li><strong>Share</strong> sends files only to the destination you choose (Mail, messengers, AirDrop, etc.).</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>4. Permissions</h2>
+            <ul>
+              <li><strong>Camera</strong> — to capture pages, documents, and ID photos.</li>
+              <li><strong>Photos</strong> — to import existing photos and save finished scans.</li>
+              <li><strong>Face ID</strong> — to lock folders and documents. Authentication is performed by iOS; the app never receives or stores biometric data.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section">
+            <h2>5. Purchases</h2>
+            <p>PageX Pro subscriptions and lifetime purchases are processed through the App Store by Apple. The developer does not receive your payment details.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>6. Your Rights &amp; Data Deletion</h2>
+            <p>Because the developer holds none of your data, there is nothing to export or delete on our side. All local data is removed when you delete the app (any optional iCloud Drive copies can be deleted manually in the Files app).</p>
+            <p>This policy complies with the Law of the Republic of Kazakhstan “On Personal Data and Their Protection.”</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>7. Children</h2>
+            <p>PageX does not collect personal data from children or adults.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>8. Changes to This Policy</h2>
+            <p>Any updates to this policy will be published on this page with an updated revision date.</p>
+          </section>
+
+          <section class="doc-section">
+            <h2>9. Contact</h2>
+            <p>If you have any privacy questions, email <a href="mailto:pagex.support@icloud.com">pagex.support@icloud.com</a>. We typically reply within 1–2 days.</p>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2026 Aidos Marat · PageX</div>
+      <div class="footer-links">
+        <a href="privacy.html" data-i18n="footer_privacy">Политика конфиденциальности</a>
+        <a href="terms.html" data-i18n="footer_terms">Условия использования</a>
+        <a href="support.html" data-i18n="footer_support">Поддержка</a>
+        <a href="https://instagram.com/atobroo" target="_blank" rel="noopener">Instagram @atobroo</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

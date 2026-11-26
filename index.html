@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru" data-active-lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PageX — Сканы книг и документов на iPhone и Mac</title>
+  <meta name="description" content="Снимите страницу телефоном — PageX уберёт тени, желтизну и пальцы, выпрямит лист и распознает текст на 100+ языках, включая казахский. На iPhone и Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PageX — Сканы книг как с планшетного сканера">
+  <meta property="og:description" content="Снимите страницу телефоном — PageX уберёт тени, желтизну и пальцы, выпрямит лист и распознает текст. На iPhone и Mac.">
+  <meta property="og:image" content="img/after.jpg">
+  <link rel="icon" type="image/png" href="img/icon-256.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">
+        <img class="brand-icon" src="img/icon-256.png" alt="PageX" width="256" height="256" loading="lazy">
+        <span>PageX</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#features" data-i18n="nav_features">Возможности</a></li>
+          <li><a href="#before-after" data-i18n="nav_before_after">До/после</a></li>
+          <li><a href="#iphone" data-i18n="nav_iphone">iPhone</a></li>
+          <li><a href="#mac" data-i18n="nav_mac">Mac</a></li>
+          <li><a href="#pro" data-i18n="nav_pro">Pro</a></li>
+          <li><a href="#privacy" data-i18n="nav_privacy">Приватность</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+          <button type="button" class="lang-btn" data-lang="ru" aria-pressed="true">РУС</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">ENG</button>
+        </div>
+
+        <a class="btn btn--primary btn--sm nav-cta-desktop js-appstore-btn is-disabled" aria-disabled="true">
+          <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+          </svg>
+          <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+        </a>
+
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-drawer-links">
+        <a href="#features" data-i18n="nav_features">Возможности</a>
+        <a href="#before-after" data-i18n="nav_before_after">До/после</a>
+        <a href="#iphone" data-i18n="nav_iphone">iPhone</a>
+        <a href="#mac" data-i18n="nav_mac">Mac</a>
+        <a href="#pro" data-i18n="nav_pro">Pro</a>
+        <a href="#privacy" data-i18n="nav_privacy">Приватность</a>
+      </div>
+      <a class="btn btn--primary btn--sm js-appstore-btn is-disabled" aria-disabled="true">
+        <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+        </svg>
+        <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            <span data-i18n="hero_badge">iPhone · iPad · Mac</span>
+          </div>
+          <h1 data-i18n="hero_title">Сканы книг как с планшетного сканера</h1>
+          <p class="hero-lead" data-i18n="hero_subtitle">Снимите страницу телефоном — PageX уберёт тени, желтизну и пальцы, выпрямит лист и распознает текст. На iPhone и Mac.</p>
+          <p class="hero-pills" data-i18n="hero_pills">Без регистрации · Без рекламы · Всё на устройстве</p>
+          <div class="hero-cta-row">
+            <a class="btn btn--primary js-appstore-btn is-disabled" aria-disabled="true">
+              <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+              </svg>
+              <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="phone-frame phone-frame--hero">
+            <div class="phone-screen">
+              <img src="img/after.jpg" alt="Страница книги после очистки в PageX" data-i18n-alt="hero_img_alt" width="688" height="1102" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Before / After -->
+    <section id="before-after" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="ba_eyebrow">Результат за секунду</span>
+          <h2 data-i18n="ba_title">До и после PageX</h2>
+          <p data-i18n="ba_desc">Снято обычным телефоном при комнатном свете. PageX автоматически убирает жёлтый фон, тени и выравнивает контраст текста.</p>
+        </div>
+
+        <div class="ba-mode-wrap">
+          <div class="ba-mode-switch" role="group" aria-label="Comparison view">
+            <button type="button" class="ba-mode-btn" data-ba-mode="pair" aria-pressed="true" data-i18n="ba_mode_side">Рядом</button>
+            <button type="button" class="ba-mode-btn" data-ba-mode="slider" aria-pressed="false" data-i18n="ba_mode_slider">Ползунок</button>
+          </div>
+        </div>
+
+        <div id="ba-pair-view" class="ba-pair">
+          <figure class="ba-card" style="margin:0;">
+            <div class="ba-img-wrap">
+              <img src="img/before.jpg" alt="Страница книги, снятая телефоном: жёлтая бумага и тень" data-i18n-alt="ba_before_alt" width="700" height="1102" loading="lazy">
+            </div>
+            <figcaption class="ba-caption">
+              <span data-i18n="ba_before">Снимок телефоном</span>
+              <span class="ba-tag" data-i18n="ba_before_tag">До</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ba-card" style="margin:0;">
+            <div class="ba-img-wrap">
+              <img src="img/after.jpg" alt="Та же страница после обработки в PageX: чистый белый лист и чёткий текст" data-i18n-alt="ba_after_alt" width="688" height="1102" loading="lazy">
+            </div>
+            <figcaption class="ba-caption">
+              <span data-i18n="ba_after">После PageX</span>
+              <span class="ba-tag ba-tag--after" data-i18n="ba_after_tag">После</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div id="ba-slider-view" class="ba-slider-box is-hidden">
+          <div id="ba-slider-stage" class="ba-slider-stage">
+            <img src="img/before.jpg" alt="Страница книги, снятая телефоном: жёлтая бумага и тень" data-i18n-alt="ba_before_alt" width="700" height="1102" loading="lazy">
+            <img class="ba-slider-after" src="img/after.jpg" alt="Та же страница после обработки в PageX: чистый белый лист и чёткий текст" data-i18n-alt="ba_after_alt" width="688" height="1102" loading="lazy">
+            <div class="ba-slider-divider" aria-hidden="true"></div>
+            <div class="ba-slider-handle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 3 12 9 6"></polyline>
+                <polyline points="15 6 21 12 15 18"></polyline>
+              </svg>
+            </div>
+            <span class="ba-slider-label ba-slider-label--before" data-i18n="ba_before">Снимок телефоном</span>
+            <span class="ba-slider-label ba-slider-label--after" data-i18n="ba_after">После PageX</span>
+            <input id="ba-range" class="ba-range" type="range" min="0" max="100" value="50" aria-label="Before and after comparison">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="feat_eyebrow">Возможности</span>
+          <h2 data-i18n="feat_title">Всё для книг, документов и текста</h2>
+          <p data-i18n="feat_desc">Быстрый сканер на iPhone и студия глубокой очистки книг на Mac — без облаков и подписок за каждый шаг.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z"></path>
+                <path d="M19 16l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="f1_title">Очистка сканов</h3>
+            <p data-i18n="f1_desc">Убирает тени, жёлтую бумагу, пальцы в кадре и выпрямляет изгиб строк у корешка книги.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <path d="M12 3a14 14 0 0 1 0 18"></path>
+                <path d="M12 3a14 14 0 0 0 0 18"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="f2_title">Распознавание на 100+ языках</h3>
+            <p data-i18n="f2_desc">Точный OCR с полноценной поддержкой казахского языка (ә, ғ, қ, ң, ө, ұ, ү, һ, і), русского и английского.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M20 7V5a2 2 0 0 0-2-2h-2"></path>
+                <path d="M4 17v2a2 2 0 0 0 2 2h2"></path>
+                <path d="M20 17v2a2 2 0 0 1-2 2h-2"></path>
+                <line x1="8" y1="9" x2="16" y2="9"></line>
+                <line x1="8" y1="13" x2="16" y2="13"></line>
+                <line x1="8" y1="17" x2="13" y2="17"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="f3_title">«Текст с фото»</h3>
+            <p data-i18n="f3_desc">Навёл камеру, снял — и сразу готовый редактируемый текст: скопировать, отправить или перевести.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="3" width="16" height="18" rx="3"></rect>
+                <circle cx="12" cy="10" r="3"></circle>
+                <path d="M7.5 18a4.5 4.5 0 0 1 9 0"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="f4_title">Фото на документы</h3>
+            <p data-i18n="f4_desc">3×4, паспорт, визы, Green Card (DV Lottery) с заменой фона и листом для печати 10×15 или A4.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7a2 2 0 0 1 2-2h4.6a2 2 0 0 1 1.5.7l1.3 1.6a2 2 0 0 0 1.5.7H19a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="f5_title">Папки и документы</h3>
+            <p data-i18n="f5_desc">Страницы 01, 02, 03 по порядку, цветные папки с иконками, теги, поиск по тексту и защита Face ID.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v12"></path>
+                <polyline points="7 8 12 3 17 8"></polyline>
+                <path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="f6_title">Гибкий экспорт</h3>
+            <p data-i18n="f6_desc">PDF с текстовым слоем, Word (.docx), TXT, JPG и длинное изображение для удобной отправки в мессенджеры.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 4v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V7l7-4z"></path>
+                <polyline points="9 12 11.2 14.2 15.5 9.8"></polyline>
+              </svg>
+            </div>
+            <h3 data-i18n="f7_title">Без интернета</h3>
+            <p data-i18n="f7_desc">Очистка, распознавание текста и фото на документы работают полностью локально на вашем устройстве.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PageX on iPhone -->
+    <section id="iphone" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="ios_eyebrow">iPhone и iPad</span>
+          <h2 data-i18n="ios_title">PageX на iPhone</h2>
+          <p data-i18n="ios_desc">Понятный интерфейс с инструментами на виду, папками и живым просмотром фильтров.</p>
+        </div>
+
+        <div class="shots-grid">
+          <figure class="shot-item" style="margin:0;">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <img src="img/shot-home.jpg" alt="Главный экран PageX на iPhone с папками и документами" data-i18n-alt="shot1_alt" width="560" height="1147" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="shot-meta">
+              <span class="shot-num">01</span>
+              <span class="shot-title" data-i18n="shot1_caption">Главная и папки</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-item" style="margin:0;">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <img src="img/shot-result.jpg" alt="Экран результата сканирования с фильтрами в PageX" data-i18n-alt="shot2_alt" width="560" height="1147" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="shot-meta">
+              <span class="shot-num">02</span>
+              <span class="shot-title" data-i18n="shot2_caption">Очистка и фильтры</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-item" style="margin:0;">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <img src="img/shot-page.jpg" alt="Просмотр страницы документа в PageX" data-i18n-alt="shot3_alt" width="560" height="1147" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="shot-meta">
+              <span class="shot-num">03</span>
+              <span class="shot-title" data-i18n="shot3_caption">Страница документа</span>
+            </figcaption>
+          </figure>
+
+          <figure class="shot-item" style="margin:0;">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <img src="img/shot-pro.jpg" alt="Экран PageX Pro" data-i18n-alt="shot4_alt" width="560" height="1147" loading="lazy">
+              </div>
+            </div>
+            <figcaption class="shot-meta">
+              <span class="shot-num">04</span>
+              <span class="shot-title" data-i18n="shot4_caption">PageX Pro</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PageX on Mac -->
+    <section id="mac" class="section">
+      <div class="container">
+        <div class="mac-panel">
+          <div class="section-header" style="margin-bottom:0;">
+            <span class="section-eyebrow" data-i18n="mac_eyebrow">macOS</span>
+            <h2 data-i18n="mac_title">PageX на Mac</h2>
+            <p data-i18n="mac_desc">Нативное приложение для оцифровки больших книг, архивов и сложных PDF-документов.</p>
+          </div>
+
+          <div class="mac-grid">
+            <article class="mac-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="mac1_title">Целые книги за один проход</h3>
+                <p data-i18n="mac1_desc">Пакетная очистка папок со сканами и многостраничных PDF, контроль качества и автовыпрямление строк.</p>
+              </div>
+            </article>
+
+            <article class="mac-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                  <line x1="12" y1="4" x2="12" y2="20"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="mac2_title">Разделение разворотов</h3>
+                <p data-i18n="mac2_desc">Автоматический поиск линии корешка, разделение разворотов на отдельные страницы и сохранение иллюстраций.</p>
+              </div>
+            </article>
+
+            <article class="mac-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="8" y1="13" x2="16" y2="13"></line>
+                  <line x1="8" y1="17" x2="13" y2="17"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="mac3_title">Распознавание и PDF-инструменты</h3>
+                <p data-i18n="mac3_desc">Поиск по тексту, объединение и разделение PDF, сжатие до нужного размера, подпись, сравнение и конвертация.</p>
+              </div>
+            </article>
+
+            <article class="mac-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="13" height="10" rx="2"></rect>
+                  <line x1="6" y1="18" x2="11" y2="18"></line>
+                  <rect x="16" y="7" width="6" height="12" rx="1.5"></rect>
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="mac4_title">Связка iPhone → Mac</h3>
+                <p data-i18n="mac4_desc">Отправляйте проект .pagex с исходниками по AirDrop или через iCloud Drive и продолжайте чистку на большом экране.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PageX Pro -->
+    <section id="pro" class="section">
+      <div class="container">
+        <div class="pro-card">
+          <span class="section-eyebrow" data-i18n="pro_eyebrow">Прозрачные условия</span>
+          <h2 data-i18n="pro_title">PageX Pro</h2>
+          <p class="pro-lead" data-i18n="pro_lead">7 дней или 50 страниц — бесплатно, без ограничений. Потом — годовая подписка или покупка навсегда.</p>
+          <a class="btn btn--primary js-appstore-btn is-disabled" aria-disabled="true">
+            <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+            </svg>
+            <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+          </a>
+          <p class="pro-note" data-i18n="pro_note">Покупка через App Store. Подписку можно отменить в любой момент в настройках Apple ID.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Privacy -->
+    <section id="privacy" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="priv_eyebrow">Приватность</span>
+          <h2 data-i18n="priv_title">Ваши документы принадлежат только вам</h2>
+          <p data-i18n="priv_desc">PageX создан так, чтобы ваши сканы, паспорта и книги никогда не покидали устройство без вашего решения.</p>
+        </div>
+
+        <div class="privacy-grid">
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M5 20a7 7 0 0 1 14 0"></path>
+                <line x1="18" y1="6" x2="22" y2="10"></line>
+                <line x1="22" y1="6" x2="18" y2="10"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="priv1_title">Без регистрации</h3>
+            <p data-i18n="priv1_desc">Никаких аккаунтов, паролей и сбора контактов. Открыли приложение — сразу работаете.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="2" width="12" height="20" rx="3"></rect>
+                <line x1="11" y1="18" x2="13" y2="18"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="priv2_title">Всё на устройстве</h3>
+            <p data-i18n="priv2_desc">Очистка изображений, OCR и фото на документы выполняются локально процессором вашего устройства.</p>
+          </article>
+
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5 20 1 12 1 12a21.8 21.8 0 0 1 5.06-5.94"></path>
+                <path d="M9.9 4.24A10.9 10.9 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-3.17 4.49"></path>
+                <line x1="2" y1="2" x2="22" y2="22"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="priv3_title">Без рекламы и слежки</h3>
+            <p data-i18n="priv3_desc">Нет рекламных баннеров, сторонних трекеров и скрытой телеметрии.</p>
+          </article>
+        </div>
+
+        <div class="privacy-footer-link">
+          <a href="privacy.html" data-i18n="priv_link">Читать Политику конфиденциальности →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2 data-i18n="final_title">Оцифруйте свою библиотеку</h2>
+          <p data-i18n="final_desc">Сканируйте книги, документы и текст на iPhone и Mac — чисто, быстро и приватно.</p>
+          <a class="btn btn--cta-white js-appstore-btn is-disabled" aria-disabled="true">
+            <svg class="apple-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1.01 2.97 1.08.08 2.17-.54 2.83-1.34"/>
+            </svg>
+            <span class="js-appstore-label" data-i18n="cta_soon">Скоро в App Store</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2026 Aidos Marat · PageX</div>
+      <div class="footer-links">
+        <a href="privacy.html" data-i18n="footer_privacy">Политика конфиденциальности</a>
+        <a href="terms.html" data-i18n="footer_terms">Условия использования</a>
+        <a href="support.html" data-i18n="footer_support">Поддержка</a>
+        <a href="https://instagram.com/atobroo" target="_blank" rel="noopener">Instagram @atobroo</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
